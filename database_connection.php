@@ -44,13 +44,13 @@ $db = mysqli_connect($hostName, $userName, $userPass, $database) or die(mysqli_e
 //   echo "Database creation failed: " . $connection->error;
 // }
 
-// $new_person_query = "INSERT INTO people(name,salary)
-//                VALUES('Tim','100'),
-//                ('Mohnish','100000'),
-//                ('Troy','500'),
-//                ('James','10000')
-//               ";
-//
+$new_person_query = "INSERT INTO people(name,salary)
+               VALUES('Tim','100'),
+               ('Mohnish','100000'),
+               ('Troy','500'),
+               ('James','10000')
+              ";
+
 //               if (mysqli_query($db,$new_person_query)){
 //                 echo "Added: " . $new_person_query;
 //               }else{
