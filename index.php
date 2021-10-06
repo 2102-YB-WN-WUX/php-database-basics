@@ -15,6 +15,23 @@
         <h1>Databases in PHP</h1>
         <?php include "database_connection.php"; ?>
       </div>
+      <div class="col-12">
+				<form action="action.php" method="post">
+				  <div class="form-group">
+						<label for="NameInput">Name</label>
+				    <input type="text" name="name_input" class="form-control col-3" id="name_input" placeholder="Name">
+				  </div>
+				  <div class="form-group">
+				    <label for="EyeInput">Eye Color</label>
+				    <input type="text" name="eyecolor_input" class="form-control col-2" id="eyecolor_input" placeholder="Eye color">
+				  </div>
+					<div class="form-group">
+				    <label for="AgeInput">Age</label>
+				    <input type="text" name="age_input" class="form-control col-2" id="age_input" placeholder="Age">
+				  </div>
+				  <button type="submit" class="btn btn-primary" id="submit" name="submit">Submit</button>
+				</form>
+			</div>
     </div>
   </div>
 	</body>

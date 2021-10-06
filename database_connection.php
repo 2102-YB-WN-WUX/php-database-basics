@@ -3,7 +3,7 @@
 $hostName = "localhost";
 $userName = "root";
 $userPass = "root";
-$database = "new_database";
+$database = "dudes";
 
 // Connect directly to the database on PHPMyAdmin
 $db = mysqli_connect($hostName, $userName, $userPass, $database) or die(mysqli_error());
@@ -11,12 +11,12 @@ $db = mysqli_connect($hostName, $userName, $userPass, $database) or die(mysqli_e
 // print_r($db);
 
 // Set up our initial table
-$new_table_query = "CREATE TABLE people(
-                    id INT AUTO_INCREMENT,
-                    name VARCHAR(50) NOT NULL,
-                    salary INT NOT NULL,
-                    primary key (id)
-                  )";
+// $new_table_query = "CREATE TABLE people(
+//                     id INT AUTO_INCREMENT,
+//                     name VARCHAR(50) NOT NULL,
+//                     salary INT NOT NULL,
+//                     primary key (id)
+//                   )";
 
 // if (mysqli_query($db,$new_table_query)){
 //   echo "Table created successfully!";
@@ -57,15 +57,15 @@ $new_table_query = "CREATE TABLE people(
 //                 echo "Error creating person: " . mysqli_error($db);
 //               }
 
-$show_all_users_query = "SELECT id, name, salary FROM people";
-  $result = $db->query($show_all_users_query);
-  if ($result->num_rows > 0) {
-    // Output data from each row
-    while($row = $result->fetch_assoc()) {
-      echo '<div>' . $row["name"] . '</div>';
-    }
-  }else{
-    echo "0 results";
-  }
+// $show_all_users_query = "SELECT id, name, salary FROM people";
+//   $result = $db->query($show_all_users_query);
+//   if ($result->num_rows > 0) {
+//     // Output data from each row
+//     while($row = $result->fetch_assoc()) {
+//       echo '<div>Name: ' . $row["name"] . " Salary: " . $row["salary"] .'</div>';
+//     }
+//   }else{
+//     echo "0 results";
+//   }
 
 ?>
